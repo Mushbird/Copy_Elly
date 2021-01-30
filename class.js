@@ -22,9 +22,31 @@ class Person {
     }
 }
 
-const ellie = new Person('ellie', 20);
-console.log(eliie.name);
-console.log(ellie.age);
-ellie.speak();
+//const ellie = new Person('ellie', 20);
+// console.log(eliie.name);
+// console.log(ellie.age);
+// ellie.speak(); 
+
+// 2. Getter and setters
+class User {
+    constructor(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+    get age() {
+        return this._age;
+    }
+
+    set age(value) {
+        this._age = value;
+    }
+}
+
+//const user1 = new User('Alex', 'Job', -1);
+//console.log(user1.age);
+
+// 3. Fields (public, private)
 
 
