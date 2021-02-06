@@ -40,8 +40,8 @@ const maxNumber = 5;
 
 const count = 17; // integer
 const size = 17.1; // decimal number
-console.log('value: ${const}, type: ${typeod count}');
-console.log('value: ${size}, type: ${typeof size}');
+console.log(`value: ${const}, type: ${typeod count}`);
+console.log(`value: ${size}, type: ${typeof size}`);
 
 // number - speicla numeric values: infinity, -infinity
 const infinity = 1 / 0;
@@ -54,16 +54,16 @@ console.log(nAn);
 // 새롭게 추가된 
 // BigInt (fairly new, don`t use it yet)
 const bigInt = 1234567890123456789012345678901234567890n; // over(-2**53) ~ 2*53
-console.log('value: ${bigInt}, type: ${bigInt}');
+console.log(`value: ${bigInt}, type: ${bigInt}`);
 Number.MAX_SAFE_INTEGER;
 
 // string
 const char = 'c';
 const brendan = 'brendan';
 const greeting = 'hello ' + brendan;
-console.log('value: ${greeting}, type: ${typeof greeting}');
-const helloBob = 'hi ${brendan}!'; // template literals (string)
-console.log('value: ${helloBob}, type: ${typeof helloBob}');
+console.log(`value: ${greeting}, type: ${typeof greeting}`);
+const helloBob = `hi ${brendan}!`; // template literals (string)
+console.log(`value: ${helloBob}, type: ${typeof helloBob}`);
 console.log('value: ' + helloBob + ' type: ' + typeof helloBob);
 
 // boolean
@@ -71,5 +71,8 @@ console.log('value: ' + helloBob + ' type: ' + typeof helloBob);
 // true: any other value
 const canRead = true;
 const test = 3 < 1; // false
-console.log('value: ${canRead}, type: ${typeof canRead}');
-console.log('value: ${test}, type: ${typeof test}');
+console.log(`value: ${canRead}, type: ${typeof canRead}`);
+console.log(`value: ${test}, type: ${typeof test}`);
+
+
+
