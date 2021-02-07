@@ -3,7 +3,7 @@
 // use this for Valina Javascript
 'use strict';
 
-// 2. Variable
+// 2. Variable, rw(read/write)
 // let (added in ES6) 
 let globalName = 'global name'; // 글로벌 변수
 
@@ -25,7 +25,14 @@ let globalName = 'global name'; // 글로벌 변수
 }
 console.log(age); // 블럭 밖에서도 보일 수 있다.
 
-// 3. Contants 값이 선언되면 절대 값이 바뀌지 않는다.
+// 3. Constant r(read only)
+// use const whenever possible.
+// only use let if variable needs to change.
+
+// Note!
+// Immutable data types : premitive types, frozen objects (i.e. object.freeze())
+// Mutable data types : all objects by default are mutable in JS
+// 값이 선언되면 절대 값이 바뀌지 않는다.
 // favor immutable data type always for a few reasons:
 // - security
 // - thread safety
@@ -35,7 +42,7 @@ const maxNumber = 5;
 
 // 4. variable types
 // primitive, single item: number, string, boolean, null, undefined (더의상 나눌 수 없는 타입)
-// object, box container
+// object, box container (ref)
 // funcion, first-class funtion
 
 const count = 17;   // integer
@@ -104,4 +111,11 @@ text = '7' + 5;
 console.log(`value: ${text}, type: ${typeof text}`);
 text = '8' / '2';
 console.log(`value: ${text}, type: ${typeof text}`);
+
+
+
+
+
+
+
 
