@@ -9,7 +9,7 @@ console.log(1 - 1); // dubstract
 console.log(1 / 1); // divide
 console.log(1 * 1); // multiply
 console.log(5 % 2); // remainder
-consolg.log(2 ** 3); // exponentiation(지수)
+console.log(2 ** 3); // exponentiation(지수)
 
 // 3. Increment and decrement operators
 let counter = 2;
@@ -100,3 +100,33 @@ console.log(null === undefined);
 
 // 8. Conditional operators: if
 // if, else if, else
+const name = 'coder';
+if (name === ellie) {
+    console.log('Welcome, Ellie!');
+} else if (name === 'coder') {
+    console.log('You are amazing coder');
+} else {
+    console.log('unkwnon');
+}
+
+// 9. Ternary operator: ?
+// condition ? value1 : value2;
+console.log(name === 'ellie' ? 'yes' : 'no');
+
+// 10. Switch statement
+// use for multiple if checks
+// use for enum-like value check
+// use for multiple type checks in TS
+const browser = 'IE';
+switch (browser) {
+    case 'IE':
+        console.log('go away!');
+        break;
+    case 'Chrome':
+    case 'Firefox':
+        console.log('love you!');
+        break;
+    default:
+        console.log('same all!');
+        break;
+}
