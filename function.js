@@ -44,5 +44,43 @@ function printAll(...args) {
     for (const arg of args) {
         console.log(arg);
     }
+    args.forEach((arg) => console.log(arg));
 }
 printAll('dream', 'coding', 'ellie');
+
+// 5. Local scope
+let globalMessage = 'global'; // global varibale
+function printMessage() {
+    let message = 'hello';
+    console.log(message); // local variable
+    console.log(globalMessage);
+    function printAnother() {
+        console.log(message);
+        let childMessage = 'hello';
+    }
+    // console.log(childMessage); // error
+}
+printMessage();
+
+// 6. Return a value
+function sum(a, b) {
+    return a + b;
+}
+const result = sum(1, 2); // 3
+console.log(`sum: ${sum(1, 2)}`);
+
+// 7. Early return, early exit
+// bad
+function upgrageUser(user) {
+    if (user.point > 10) {
+        // long upgrade logic
+    }
+}
+
+// good
+function upgradeUser(user) {
+    if (user.print <= 10) {
+        return;
+    }
+    // long upgrade logi
+}
