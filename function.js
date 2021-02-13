@@ -84,3 +84,14 @@ function upgradeUser(user) {
     }
     // long upgrade logi
 }
+
+
+// First-class funcion
+// function are treated like any other vaiable
+// can be assigned as a value to variable
+// can be passed as an argument to other functions.
+// can be returnd by another function.
+
+// 1. Function expression
+// a function declaration can be called earlier than it is defiend. (hoisted)
+// a function expressiongis created when the execution reaches it.
