@@ -95,3 +95,12 @@ function upgradeUser(user) {
 // 1. Function expression
 // a function declaration can be called earlier than it is defiend. (hoisted)
 // a function expressiongis created when the execution reaches it.
+const print = function () {
+    // anonymous function 
+    console.log('print')
+}
+print();
+const printAgain = print;
+printAgain();
+const sumAgain = sum;
+console.log(sumAgain(1, 3));
