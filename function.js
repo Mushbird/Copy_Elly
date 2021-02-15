@@ -104,3 +104,25 @@ const printAgain = print;
 printAgain();
 const sumAgain = sum;
 console.log(sumAgain(1, 3));
+
+// 2. Callback function using function expression
+function randomQuiz(answer, printYse, printNo) {
+    if (answer === 'love you') {
+        printYse();
+    } else {
+        printNo();
+    }
+}
+// anoymous function
+const printYes = function () {
+    console.log('yes!');
+};
+
+// named function
+// better debugging in debugger`s stack traces
+// recursions
+const printNo = function print() {
+    console.log('no!');
+};
+randomQuiz('wrong', printYes, printNo);
+randomQuiz('love you', printYes, printNo);
