@@ -14,6 +14,7 @@
 
 // const ellie = { name: 'ellie', age: 4 };
 
+// 1. Literals and properties
 const obj1 = {};    // 'object literal' syntax
 const obj2 = new Object();  // 'object constructor' syntax
 
@@ -27,5 +28,10 @@ print(ellie);
 
 // with JavaScript magic (dynamically typed language)
 // can add properties later
-ellie.hasJob = true;
+delete ellie.hasJob = true;
 console.log(ellie.hasJob);
+
+// 2. Computed properties
+// key should be always string
+console.log(ellie.name);
+console.log(ellie['name']);
