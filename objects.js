@@ -35,3 +35,14 @@ console.log(ellie.hasJob);
 // key should be always string
 console.log(ellie.name);
 console.log(ellie['name']);
+
+function printValue(obj, key) {
+    console.log(obj[key]);
+}
+printValue(ellie, 'name');
+printValue(ellie, 'age');
+
+// 3. Property value shorthand
+const person1 = { name: 'bob', age: 2};
+const person2 = { name: 'steve', age: 3};
+const person3 = { name: 'dave', age: 4};
