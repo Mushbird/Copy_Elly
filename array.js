@@ -29,4 +29,24 @@ for (let fruit of fruits) {
 }
 
 // c. forEach
-fruits.forEach();
+// fruits.forEach(function (fruit, index, array) {
+//     console.log(fruit, index, array);
+// });
+fruits.forEach((fruit) => console.log(fruit));
+
+// 4. Addtion, deletion, copy
+// push: add an item to the end
+fruits.push('strawbay', 'pitch');
+console.log(fruits);
+
+// pop: remove an item from the end
+fruits.pop();
+fruits.pop();
+console.log(fruits);
+
+// unshift: add an item to the benigging
+fruits.shith();
+fruits.shift();
+console.log(fruits);
+
+// note!! shift, unshift are slower than pop, push
