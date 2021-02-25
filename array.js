@@ -45,8 +45,43 @@ fruits.pop();
 console.log(fruits);
 
 // unshift: add an item to the benigging
-fruits.shith();
+fruits.unshift('strawbay', 'lemon');
+console.log(fruits);
+
+// shift: remove an item from the benigging
+fruits.shift();
 fruits.shift();
 console.log(fruits);
 
 // note!! shift, unshift are slower than pop, push
+// splice: remove an item by index position
+fruits.push('strawbay', 'pitch', 'lemon');
+console.log(fruits);
+fruits.splice(1, 1);
+console.log(fruits);
+fruits.splice(1, 1, 'apple', 'watermelon');
+console.log(fruits);
+
+//combine two arrays
+const fruits2 = ['lemon', 'coconet'];
+const newFruits = fruits.concat(fruits2);
+console.log(newFruits);
+
+// 5. Searching
+// find the index
+console.clear();
+console.log(fruits);
+console.log(fruits.indexOf('apple'));
+console.log(fruits.indexOf('watermelon'));
+console.log(fruits.indexOf('coconet'));
+
+// includes
+console.log(fruits.includes('watermelon'));
+console.log(fruits.includes('coconet'));
+
+// lastIndexOf
+console.clear();
+fruits.push('apple');
+console.log(fruits);
+console.log(fruits.includes('apple'));
+console.log(fruits.lastIndexOf('apple'));
