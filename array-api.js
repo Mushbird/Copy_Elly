@@ -61,11 +61,48 @@ const students = [
 // Q7. make an array containing Only the students` scores
 // result should be : [45, 80, 90, 66, 88]
 {
-    const result = students. map((student) => student.score);
+    const result = students.map((student) => student.score);
     console.log(result);
 }
 
 // Q8. check if there is a student with the score lower than 50
 {
+    console.clear();
+    const result = students.some((student) => student.score < 50);
+    console.log(result);
 
+    const result2 = students.every((student) => student.score >= 50);
+    console.log(result2);
+}
+
+console.clear();
+// Q9. compute students` average score
+{
+    const result = students.reduce((prev, curr) => {
+        console.log('----------');
+        console.log(prev);
+        console.log(curr);
+        return prev + curr.score;
+    }, 0);
+    console.log(result);
+}
+
+// Q10. make a string containing all the scores
+// result should be: '45, 80, 90, 66, 88'
+{
+    const result = students
+    .map((student) => student.score)
+    .filter((score) => score >= 50)
+    .join();
+    console.log(result);
+}
+
+// Bonus! do Q10 sorted in ascending order
+// result should be: '45, 66, 80, 88, 90'
+{
+    const result = students
+        .map((student) => student.score)
+        .sort((a, b) => b - a)
+        .join();
+    console.log(result);
 }
