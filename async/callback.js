@@ -8,7 +8,7 @@ setTimeout(() => console.log('2'), 1000);
 console.log('3');
 
 // Synchronous callback
-function prontInmmediately(print) {
+function prontImmediately(print) {
     print();
 }
 
@@ -22,7 +22,7 @@ function printWithDelay(print, timeout) {
 console.log('1'); // 동기
 setTimeout(() => console.log('2'), 1000); // 비동기
 console.log('3'); // 동기
-printImmediately(() => console.log('hello')); // 동기
+prontImmediately(() => console.log('hello')); // 동기
 printWithDelay(() => console.log('async callback'), 2000); // 비동기
 
 // Callback Hell example
@@ -50,3 +50,25 @@ class UserStorage {
         }, 1000);
     }
 }
+
+const userStorage = new UserStorage();
+const id = prompt('enter your id');
+const password = prompt('enter your password');
+userStorage.loginUser(
+    id,
+    password,
+    user => {
+        userStorage.getRoles(
+            user,
+            userWithRole => {
+                alert('Hello ${userWithRole.name}, you have a ${userWithRole.role} role');
+            },
+            error => {
+                console.log(error);
+            }
+        );
+    },
+    error => {
+        console.log(error);
+    }
+);
