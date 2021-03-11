@@ -56,6 +56,10 @@ const cook = egg =>
     });
 
 getHen()
-    .then(hen => getEgg(hen))
-    .then(egg => cook(egg))
-    .then(meal => console.log(meal));
+    .then(getEgg)
+    .catch(error => {
+        return 'bread';
+    })
+    .then(cook)
+    .then(console.log)
+    .catch(console.log);
