@@ -27,3 +27,11 @@ async function getBanana() {
     await delay(3000);
     return 'banana';
 }
+
+function pickFruits() {
+    return getApple().then(apple => {
+        return getBanana().then(banana => `${apple} + ${banana}`);
+    });
+}
+
+pickFruits().then(console.log);
