@@ -28,10 +28,12 @@ async function getBanana() {
     return 'banana';
 }
 
-function pickFruits() {
-    return getApple().then(apple => {
-        return getBanana().then(banana => `${apple} + ${banana}`);
-    });
+async function pickFruits() {
+    const applePromise = getApple();
+    const bananaPromise = getBanana();
+    const apple = await getApple();
+    const banana = await getBanana();
+    return `${apple} + ${banana}`;
 }
 
 pickFruits().then(console.log);
