@@ -43,3 +43,5 @@ function pickAllFruits() {
     return Promise.all([getApple(), getBanana()])
     .then(fruits => fruits.join(' + '));
 }
+
+pickAllFruits().then(console.log);
