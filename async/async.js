@@ -45,3 +45,10 @@ function pickAllFruits() {
 }
 
 pickAllFruits().then(console.log);
+
+function pickOnlyOne() {
+    return Promise.race([getApple(), getBanana()]);
+
+}
+
+pickOnlyOne().then(console.log);
