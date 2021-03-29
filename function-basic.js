@@ -14,4 +14,10 @@ function add(a, b) {
 }
 
 // 함수 호출
-doSomething(add);
+// doSomething(add);
+
+const addFun = add;
+console.log(add);
+addFun(1, 2);
+
+// add
